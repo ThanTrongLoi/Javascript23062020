@@ -1,4 +1,4 @@
-// 1: khai bao bien
+// 1: khai báo biến
 // var a = 5;
 // const b = 6;
 // a = 10;
