@@ -7,13 +7,16 @@
 // console.log(a);
 // console.log(b);
 //const: mặc định, var: có thể thay đổi
+
 // 2: kiểu dữ liệu
 // Null, Undefined # null, undefined
 // null, undefined
-var a = null
-console.log('a = '+a)
-var b
-console.log('b = '+b) //b => undefined
+// var a = null
+// console.log('a = '+a)
+// var b
+// console.log('b = '+b) //b => undefined
+
+
 
 
 
