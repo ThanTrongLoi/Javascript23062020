@@ -31,6 +31,23 @@ console.log(teo.address)
 const arrayNames = ["Teo", "Ti", "Tun"]
 arrayNames[0] = "Tuan"
 console.log(arrayNames[0])
+// mutable vs immutable
+
+// 5: toán tử
+// + - * / , ++ , -- 
+var a = 5
+var b = 6
+var ketqua = a++ - --b + --a + b-- + ++a - b++ + b-- - b++
+//           5   - --b + --a + b-- + ++a - b++ + b-- - b++
+//           5   -  5  + --a + b-- + ++a - b++ + b-- - b++
+//           5   -  5  +  5  + b-- + ++a - b++ + b-- - b++
+//           5   -  5  +  5  +  5  + ++a - b++ + b-- - b++
+//           5   -  5  +  5  +  5  +  6  - b++ + b-- - b++
+//           5   -  5  +  5  +  5  +  6  - 4   + b-- - b++
+//           5   -  5  +  5  +  5  +  6  - 4   +  6  _ b++
+//           5   -  5  +  5  +  5  +  6  - 4   +  6  _ 5
+//               0          10           2          1  = 13
+console.log(ketqua)
 
 
 
