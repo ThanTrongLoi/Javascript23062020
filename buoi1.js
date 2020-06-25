@@ -69,6 +69,16 @@ function showName(name){
 
 showName("Loi")
 
+//7: Object method
+const teo2 = {
+    name: "Nguyen Van Teo",
+    age: 10,
+    info: function(){
+        console.log("Name "+this.name)
+        console.log("Age "+this.age)
+    }
+}
+teo2.info()
 
 
 
