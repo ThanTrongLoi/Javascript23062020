@@ -1,7 +1,6 @@
 // 1: khai bao bien
 // var a = 5;
 // const b = 6;
-
 // a = 10;
 // b = 12;
 // console.log(a);
