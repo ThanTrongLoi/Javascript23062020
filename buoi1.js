@@ -26,6 +26,12 @@ console.log(teo.name, teo.age + " tuổi")
 console.log(teo['name'])
 // Trường hợp 2: Truy vấn tới key không tồn tại của object
 console.log(teo.address)
+// Trường hợp 3: Function không return => undefined
+function showName(name){
+    console.log(name)
+    return
+}
+console.log(showName("Loi"))
 
 // 4: Array
 const arrayNames = ["Teo", "Ti", "Tun"]
@@ -35,6 +41,11 @@ console.log(arrayNames[0])
 
 // 5: toán tử
 // + - * / , ++ , -- 
+
+// Độ ưu tiên của toán tử
+// 1: ++ --
+// 2: * /
+// 3: +, -
 var a = 5
 var b = 6
 var ketqua = a++ - --b + --a + b-- + ++a - b++ + b-- - b++
@@ -49,7 +60,14 @@ var ketqua = a++ - --b + --a + b-- + ++a - b++ + b-- - b++
 //               0          10           2          1  = 13
 console.log(ketqua)
 
+//6: Function
+// Phạm vi truy cập (access modifier)
+function showName(name){
+    console.log(name)
+     
+}
 
+showName("Loi")
 
 
 
