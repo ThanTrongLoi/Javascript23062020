@@ -24,8 +24,8 @@
 // console.log(multiply([2, 3, 4])); // expect: 24
 
 //12: Array Method
-const arrayNames1 = ["teo", "ti", "tun"];
-const arrayNames2 = ["hoa", "tuan"]
+// const arrayNames1 = ["teo", "ti", "tun"];
+// const arrayNames2 = ["hoa", "tuan"]
 
 // thêm vị trí cuối: push
 // arrayNames.push("toan")
@@ -36,7 +36,32 @@ const arrayNames2 = ["hoa", "tuan"]
 // xoá vị trí đầu: shift
 // arrayNames.shift()
 // nối dữ liệu: concat
-const newArrays = arrayNames1.concat(arrayNames2)
-console.log(newArrays)
+// const newArrays = arrayNames1.concat(arrayNames2)
+// console.log(newArrays)
 
+// 13: Callback
+// var a
 
+// handle(function(a){
+//     console.log(a)
+// })
+
+// function handle(cb){
+//     setTimeout(function(){
+//         a = 5
+//         cb(a)
+//     },2000)
+// }
+
+function binhphuong(num){
+    return num*num
+}
+function tinhtongArray(arr, fn){
+    var ketqua = 0;
+    for(const value of arr){
+        ketqua += fn(value)
+    }
+    return ketqua;
+}
+const arrayNums = [1,2,3,4,5]
+console.log(tinhtongArray(arrayNums,binhphuong))
