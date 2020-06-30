@@ -98,43 +98,35 @@
 // }
 
 // Ví dụ
-var apartment = {
-    bedroom: {
-      area: 20,
-      bed: {
-        type: 'twin-bed',
-        price: 100
-      }
-    }
-  };
+// var apartment = {
+//     bedroom: {
+//       area: 20,
+//       bed: {
+//         type: 'twin-bed',
+//         price: 100
+//       }
+//     }
+//   };
   
-function getKey(object){
-    for (const key in object) {
-        console.log(key)
-        if(typeof object[key] == "object"){
-            getKey(object[key])
-        }
-    //     const bedroom = obj[key]
-    //     for (const keyBedRoom in bedroom){
-    //         if(keyBedRoom == "bed"){
-    //             const bed = bedroom["bed"]
-    //             for(const keybed in bed){
-    //                 console.log(keybed)
-    //             }
-    //         }
-    //         console.log(keyBedRoom)
+// function getKey(object){
+//     for (const key in object) {
+//         console.log(key)
+//         if(typeof object[key] == "object"){
+//             getKey(object[key])
+//         }
+//     //     const bedroom = obj[key]
+//     //     for (const keyBedRoom in bedroom){
+//     //         if(keyBedRoom == "bed"){
+//     //             const bed = bedroom["bed"]
+//     //             for(const keybed in bed){
+//     //                 console.log(keybed)
+//     //             }
+//     //         }
+//     //         console.log(keyBedRoom)
 
-    //     }
-    }
-}
-getKey(apartment)
-
-
-//11: for of
-// var arrayNames = ["teo", "ti", "tun"< "hoa", "tuan"]
-// for (const iterator of arrayNames) {
-//     console.log(interator)
+//     //     }
+//     }
 // }
-
+// getKey(apartment)
 
 
