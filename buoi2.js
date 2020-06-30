@@ -53,15 +53,31 @@
 //     },2000)
 // }
 
-function binhphuong(num){
-    return num*num
-}
-function tinhtongArray(arr, fn){
-    var ketqua = 0;
-    for(const value of arr){
-        ketqua += fn(value)
-    }
-    return ketqua;
-}
-const arrayNums = [1,2,3,4,5]
-console.log(tinhtongArray(arrayNums,binhphuong))
+// function binhphuong(num){
+//     return num*num
+// }
+// function tinhtongArray(arr, fn){
+//     var ketqua = 0;
+//     for(const value of arr){
+//         ketqua += fn(value)
+//     }
+//     return ketqua;
+// }
+// const arrayNums = [1,2,3,4,5]x   
+// console.log(tinhtongArray(arrayNums,binhphuong))
+
+//14: hàm map
+const arrayNums = [1,2,3,4,5,6,7,8,9,10]
+// const newArrayNums = []
+// for (const value of arrayNums) {
+//     newArrayNums.push(value + 1)
+// }
+
+const newArrayNums = arrayNums.map(function(value, index){
+    console.log(value + 1)
+    return value + 1
+    // hàm map không thay đổi kích thước của mảng, chỉ thay đổi giá trị của mảng
+
+})
+console.log(newArrayNums)
+console.log(arrayNums)
