@@ -78,18 +78,68 @@
 
 //Ví dụ:
 
-function countOccurrences(arr) {
-    return arr.reduce(function(accumulator, currentValue){
-        // if(currentValue in accumulator)
-        if(currentValue in accumulator){
-            accumulator[currentValue]++
-        }else{
-            accumulator[currentValue] = 1
-        }
-        return accumulator
-    },{})
-}
-countOccurrences(["a", "b", "c", "b", "a", "a"]);
+// function countOccurrences(arr) {
+//     return arr.reduce(function(accumulator, currentValue){
+//         // if(currentValue in accumulator)
+//         if(currentValue in accumulator){
+//             accumulator[currentValue]++
+//         }else{
+//             accumulator[currentValue] = 1
+//         }
+//         return accumulator
+//     },{})
+// }
+// countOccurrences(["a", "b", "c", "b", "a", "a"]);
 // {"a": 3, "b": 2, "c": 1}
-console.log(countOccurrences(["a", "b", "c", "b", "a", "a"]));
+// console.log(countOccurrences(["a", "b", "c", "b", "a", "a"]));
 
+//17: Ham sort
+// const arrayNumbers = [1,4,3,7,11,10,21,20,2,31,01]
+// // a - b: tăng dần
+// // b - a: nhỏ dần
+// console.log(arrayNumbers.sort(function(a,b){
+//     return a-b
+// }))
+
+//19: Math Object (Builtin function)
+// Math.ceil() : làm tròn lên
+// Math.floor() : làm tròn xuống
+// Math.max(10,20,-1) : tìm ra số max
+// Math.min(10,20,-1) : tìm ra số min
+// Math.round() : làm tròn theo toán (trên dưới 0.5)
+// Math.random()
+// var value = Math.ceil(0.1)
+// var value2 = Math.floor(0.99)
+// var value3 = Math.max(10,20,-1)
+// var value4 = Math.min(10,20,-1)
+// var value5 = Math.round(0.4)
+// var value6 = Math.random()
+// console.log(value6)
+// 5 - 10
+// var value = Math.round(Math.random() * 5) + 5
+// console.log(value)
+
+// 20: Delete Object
+// const teo = {
+//     name: 'teo',
+//     age: 20,
+// }
+// delete teo.name
+// console.log(teo)
+
+// 21: Prototypes in Javascript
+function sinhVien(name, age){
+    this.name = name
+    this.age = age
+    this.showName = function(){
+        console.log(this.name)
+    }
+}
+sinhVien.prototype.address = function(){
+    console.log("Khoa Pham")
+}
+
+const teo = new sinhVien("Teo", 10)
+const ti = new sinhVien("ti", 22)
+console.log(teo.showName === ti.showName)
+teo.address()
