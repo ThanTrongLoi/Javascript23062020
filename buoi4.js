@@ -90,9 +90,33 @@
 // }
 // console.log(Array.from(obj))
 
-function tinhtong(){
-    return Array.from(arguments).reduce((accum, currentValue) => {
-        return accum + currentValue
-    },0)
+// function tinhtong(){
+//     return Array.from(arguments).reduce((accum, currentValue) => {
+//         return accum + currentValue
+//     },0)
+// }
+// console.log(tinhtong(1,2,3,4,5,6,7,8,9,10))
+
+//29: Default parameters
+// function tinhtong(a = 5, b = 5){
+//     console.log(a+b)
+// }
+// tinhtong()
+
+//30: Call
+// function greeting(name,age){
+//     console.log(`Hi! ${name} . I am ${age} . Adress ${this.address} . Gender ${this.gender}`)
+//   }
+//   greeting.call({address: 'quan 10', gender: 'male'} , 'Tom' , 10)
+
+//31: Apply
+
+function sum(){
+    const numbers = Array.from(arguments)
+    return numbers.reduce((sum, num)=>sum + num , 0)
 }
-console.log(tinhtong(1,2,3,4,5,6,7,8,9,10))
+function average(){
+    const x = sum.apply(null, arguments)
+    return x / arguments.length
+}
+average(1,3,6)
