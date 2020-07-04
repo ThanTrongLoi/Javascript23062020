@@ -28,3 +28,17 @@
 
 //scope: phạm vi => khi biến trùng tên sẽ ưu tiên scope trong function trước
 // từ trong truy vấn từ ngoài đc còn ngoài không truy vấn từ trong đc 
+
+//24: cách sử dụng từ khoá khai báo biến : xem file javascript nâng cao
+
+//25: function context and bind
+const teo = {
+    name: 'nguyen van teo',
+    age: 20,
+    showName : function(){
+        console.log(this.name)
+    }
+}
+// teo.showName();
+const showName2 = teo.showName.bind(teo)
+showName2()
