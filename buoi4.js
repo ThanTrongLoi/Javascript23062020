@@ -32,13 +32,36 @@
 //24: cách sử dụng từ khoá khai báo biến : xem file javascript nâng cao
 
 //25: function context and bind
-const teo = {
-    name: 'nguyen van teo',
-    age: 20,
-    showName : function(){
-        console.log(this.name)
-    }
-}
-// teo.showName();
-const showName2 = teo.showName.bind(teo)
-showName2()
+// const teo = {
+//     name: 'nguyen van teo',
+//     age: 20,
+//     showName : function(){
+//         console.log(this.name)
+//     }
+// }
+// // teo.showName();
+// const showName2 = teo.showName.bind(teo) // teo.showName.bind(name: "abc") : true
+// showName2()
+
+//26: Arrow function
+
+// const teo = {
+//     name: 'nguyen van teo',
+//     age: 20,
+//     showName: function(){
+//         console.log(this.name)
+//         var a = () => {
+//             console.log(this.name)
+//         }
+//         a()
+//     }
+//     //closures 
+// }
+// teo.showName()
+
+const arrayNames = ['Teo','Ti','Tun']
+// const newArrayNames = arrayNames.map(function(value){
+    // return 'Ti'
+// })
+const newArrayNames = arrayNames.map(value => value)
+console.log(newArrayNames)
