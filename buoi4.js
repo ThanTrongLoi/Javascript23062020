@@ -59,9 +59,40 @@
 // }
 // teo.showName()
 
-const arrayNames = ['Teo','Ti','Tun']
+// const arrayNames = ['Teo','Ti','Tun']
 // const newArrayNames = arrayNames.map(function(value){
     // return 'Ti'
 // })
-const newArrayNames = arrayNames.map(value => value)
-console.log(newArrayNames)
+// const newArrayNames = arrayNames.map(value => {
+//     return value
+// })
+// console.log(newArrayNames)
+
+// const showName = () => {} // nên dùng arow function thay function
+
+//27: Template string (backtick: ``)
+
+// const teo = {
+//     name: 'nguyen van teo',
+//     age: 20,
+// }
+// const string = "xin chao " + teo.name + ". Ban hien tai " + teo.age + " tuoi"
+// const string1 = `xin chao ${teo.name}. Ban hien tai ${teo.age} tuoi`
+// console.log(string)
+// console.log(string1)
+
+//28: Arguments
+// const obj = {
+//     0: 'Thanh',
+//     1: 'Trang',
+//     2: 'Thuy',
+//     length: 3,
+// }
+// console.log(Array.from(obj))
+
+function tinhtong(){
+    return Array.from(arguments).reduce((accum, currentValue) => {
+        return accum + currentValue
+    },0)
+}
+console.log(tinhtong(1,2,3,4,5,6,7,8,9,10))
